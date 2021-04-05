@@ -1,0 +1,14 @@
+div{
+	background-image: url(img/131333163_2941428079418277_1417847456912719970_n (1).png);
+}
+.div{
+	width: 250px;
+	height: 200px;
+	float: left;
+}
+.div1{
+	color: black;
+		}
+.div1:hover{
+	color: #4cd3d3;
+	text-decoration: underline;
