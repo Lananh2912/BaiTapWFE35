@@ -42,3 +42,12 @@ a{
 	position: absolute;
 	background-color: #78b34d;
 	width: 200px;
+}
+.menucon > li > a{
+	color: black;
+}.menucon >li:hover > a{
+	color: white;
+}
+.menuchau>li>a{
+	color: black;
+}
