@@ -1,3 +1,193 @@
-div{
+body{
 	background-image: url("../img/bg.jpg");
+	background-repeat: no-repeat;
+	background-size: 1700px 800px;
+}
+#header{
+	width: 100%;
+	height: 100px;
+	display: inline-block;
+}
+h2{
+	margin-left: 20px;
+	font-family: Arial;
+	font-style: italic;
+	font-weight: normal;
+	float: left;
+}
+#ulheader{
+	float: right;
+	margin: 10px 400px;
+}
+#ulheader>li{
+	list-style-type: none;
+	float:left;
+	margin-right: 20px;
+}
+li:hover{
+	background-color: white;
+	border-radius: 5px;
+	border: 1px;
+}
+#left{
+	width: 15%;
+	height: 600px;
+	float: left;
+}
+#menu>li{
+	width: 100px;
+	list-style-type: none;
+	float:center;
+	margin-bottom: 10px;
+}
+#menu>li>a{
+	text-decoration: none;
+	color: #424242;
+}
+#menu>li>a:hover{
+	color: red;
+}
+#main{
+	width: 60%;
+	height: 600px;
+	float: left;
+	position: relative;
+}
+#TechNew,#Travel,#Photography,#Finance,#Movies,#Cooking,#Fashion{
+	width: 200px;
+	height: 150px;
+	border-radius: 10px;
+	background-color: white;
+	margin : 10px 10px;
+}
+#TechNew{
+	float: left;
+	position: absolute;
+}
+#Travel{
+	float: left;
+	margin-left: 250px;
+	position: absolute;
+}
+#Photography{
+	float: right;
+	margin-left: 490px;
+	position: absolute;
+}
+#Finance{
+	float: left;
+	margin-top: 200px;
+	position: absolute;
+}
+#Movies{
+	float: left;
+	margin-top: 200px;
+	margin-left: 250px;
+	position: absolute;
+}
+#Cooking{
+	float: right;
+	margin-top: 200px;
+	margin-left: 490px;
+	position: absolute;
+}
+#Fashion{
+	margin-top: 390px;
+	position: absolute;
+}
+#TechNew:hover{
+	background-color: yellow;
+}
+#Travel:hover{
+	background-color: yellow;
+}
+#Photography:hover{
+	background-color: yellow;
+}
+#Finance:hover{
+	background-color: yellow;
+}
+#Movies:hover{
+	background-color: yellow;
+}
+#Cooking:hover{
+	background-color: yellow;
+}
+#Fashion:hover{
+	background-color: yellow;
+}
+#img1,#img2,#img3,#img4,#img5,#img6,#img7{
+	width: 200px;
+	height: 120px;
+	margin-top: 12px;
+	background-size: 100% 100%;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+#img1{
+	background-image: url(../img/4.jpg);
+	position: relativ
+}
+#img2{
+	background-image: url(../img/travel.jpg);
+	position: relative;
+}
+#img3{
+	background-image: url(../img/photo.jpg);
+	position: relative;
+}
+#img4{
+	background-image: url(../img/finance.jpg);
+	position: relative;
+}
+#img5{
+	background-image: url(../img/movie.jpg);
+	position: relative;
+}
+#img6{
+	background-image: url(../img/cooking.jpg);
+	position: relative;
+}
+#img7{
+	background-image: url(../img/fashion.jpg);
+	position: relative;
+}
+#chu1,#chu2,#chu3,#chu4,#chu5,#chu6,#chu7{
+	width: 200px;
+	height: 25px;
+	background-color: #BDBDBD;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	margin-top: 100px;
+	position: absolute;
+	color:white;
+	font-size: 12px;
+}
+#right{
+	width: 25%;
+	height: 600px;
+	float: right;
+}
+#footer{
+	clear: both;
+	width: 100%;
+	height: 100px;	
+}
+p{
+	font-size: 10px;
+	margin-top: 50px;
+	float: left;
+	text-decoration: none;
+}
+#ulFooter{
+	margin-left: 200px;
+}
+#ulFooter>li{
+	list-style-type: none;
+	float: left;
+	margin-right: 10px;
+	line-height: 90px;
+}
+#ulFooter>li>a{
+	color: #2E64FE;
 }
