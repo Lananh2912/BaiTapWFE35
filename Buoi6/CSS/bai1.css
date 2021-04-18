@@ -45,6 +45,7 @@ a{
 }
 .content img{
 	width: 350px;
+	    margin-left: -33px;
 }
 .content-item1{
 	float: left;
@@ -145,26 +146,4 @@ div > img{
 }
 .img:hover{
 	transform: scale(1.5,1.5);
-}
-@media screen and (min-width: 320px) and (max-width: 768px){
-	#left{
-		width: 100%;
-	}
-	#main{
-		width: 100%;
-	}
-	#right{
-		width: 100%;
-	}
-}
-@media screen and (min-width: 769px) and (max-width: 1024px){
-	#left{
-		width: 30%;
-	}
-	#main{
-		width: 70%;
-	}
-	#right{
-		display: none;
-	}
 }

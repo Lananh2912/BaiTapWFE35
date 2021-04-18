@@ -1,0 +1,41 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+#content{
+	width: 100%;
+	
+}
+.content1{
+	width: 20%;
+	float: left;
+	margin-left: 50px; 
+	padding-top: 30px;
+	
+}
+.content1 img{
+
+	width: 100%;
+
+}
+@media screen and (min-width: 320px) and (max-width: 768px){
+	.content1{
+		width: 100%;
+	}
+}
+@media screen and (min-width: 769px) and (max-width: 992px){
+	
+	.content1{
+		width: 50%;
+		margin-left: 0;
+	}
+	.content1 img{
+		width: 100%;
+	}
+}
+/*@media screen and (max-width: 993px){
+	.content1{
+		width: 20%;
+
+	}
+}*/
