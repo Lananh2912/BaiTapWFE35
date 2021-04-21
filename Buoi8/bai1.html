@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var number = 100;
+      var sum = 0;
+      for (var i = 1; i <= number; i++) {
+        if (i % 3 == 0 || i % 7 == 0) {
+          document.write(i + "<br>");
+          sum = sum + i;
+        }
+      }
+      document.write("tổng hai số chia hết cho 3 hoặc cho 7: " + sum);
+    </script>
+  </body>
+</html>

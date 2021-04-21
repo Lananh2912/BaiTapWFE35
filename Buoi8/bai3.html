@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var i,
+        j,
+        tong = 0;
+      mau = 1;
+      var n = prompt("nhập số n  mà bạn nhập ");
+      for (i = 1; i <= n; i++) {
+        for (j = 1; j <= i; j++) {
+          mau = mau * j;
+        }
+        tong = tong + i / mau;
+        mau = 1;
+      }
+      document.write("tổng là : " + tong);
+    </script>
+  </body>
+</html>
