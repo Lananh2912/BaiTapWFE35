@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style type="text/css">
+      .form{
+        border: 1px solid black;
+        width: 30%;
+        height: 100px;
+        padding: 10px 30px;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    
+    <script language="javascript">
+      document.addEventListener("DOMContentLoaded", function () {
+        var defaultBtn = document.querySelector(".default");
+        var biggerBtn = document.querySelector(".bigger");
+        var smallerBtn = document.querySelector(".smaller");
+
+        var defaultFontSize = 16;
+        var currentFontSize = defaultFontSize;
+
+        defaultBtn.addEventListener("click", function () {
+          currentFontSize = defaultFontSize;
+          setFontSize(currentFontSize);
+        });
+
+        biggerBtn.addEventListener("click", function () {
+          currentFontSize *= 1.4;
+          setFontSize(currentFontSize);
+        });
+
+        smallerBtn.addEventListener("click", function () {
+          currentFontSize /= 1.4;
+          setFontSize(currentFontSize);
+        });
+        function setFontSize(fontSize) {
+          var body = document.body;
+          body.style.fontSize = `${fontSize}px`;
+        }
+      });
+    </script>
+
+    <form action=""class="form" >
+      <h3>Cỡ chữ</h3>
+      <input type="button" value="Lớn " class="bigger" />
+      <input type="button" value="nhỏ " class="smaller" />
+      <input type="button" value="mặc định" class="default" />
+    </form>
+    <br>
+    <div id="message">Lorem, ipsum dolor sit, amet consectetur adipisicing elit. Alias debitis, reprehenderit quas fugiat delectus non nihil quae earum nobis distinctio. Voluptatem, molestiae fugiat amet. Dolore perspiciatis repellendus assumenda perferendis, necessitatibus quasi. Officiis voluptatem hic sit tempora. Deserunt praesentium quis similique libero natus expedita ipsum, ullam nostrum qui facere suscipit quos.</div>
+
+    
+  </body>
+</html>
+
+
