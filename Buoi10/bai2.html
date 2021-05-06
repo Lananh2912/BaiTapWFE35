@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/bai2.css">
+</head>
+<body>
+	<div id="content">
+		<div class="ten">
+			<p>Họ và tên</p>
+			<p>Giới tính</p>
+			<p>Email</p>
+			<p>Số điện thoại</p>
+			<p>Mật khẩu</p>
+			<p>Xác nhận mật khẩu</p>
+		</div>
+	
+		<div class="input">
+			<input id="name" type="text" placeholder="Nhập họ và tên...">
+			<div class="gioitinh">
+				<input name="" type="radio">Nam
+				<input name="" type="radio">Nữ
+			</div>
+			<input id="email" type="text" placeholder="Nhập email...">
+			<input id="sdt" type="text" placeholder="Nhập số điện thoại...">
+			<input type="password" id="password">	
+			<input type="password" id="password1">		
+		</div>
+
+		<div class="error">
+			<span class="error1">Yêu cầu nhập họ tên đầy đủ!</span>
+			<span class="error1"></span>
+			<span class="error1">Yêu cầu nhập email!</span>
+			<span class="error1">Yêu cầu nhập số điện thoại!</span>
+			<span class="error1">Yêu cầu nhập mật khẩu!</span>
+			<span class="error1">Yêu cầu xác nhận mật khẩu!</span>
+		</div>
+	</div>
+
+	<div class="red">
+		<button id="login">Đăng kí</button>
+		<button id="reset">Xoá trắng</button>
+	</div>
+
+	<script>
+		
+		var error1 = document.getElementsByClassName("error1");
+		var count=0;
+		for (var i = 0; i < error1.length; i++) {
+			error1[i].textContent = '';
+		}
+		var name = document.getElementById("name").addEventListener("keyup", function(){
+			if(document.getElementById("name").value.length < 8) {
+				error1[0].textContent = 'Tên không hợp lệ!';
+			}else {
+				error1[0].textContent = '';
+				count++;
+			}
+		});
+
+		document.getElementById("email").addEventListener("keyup", function(){
+			var email = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+			if(email.value == "" || !so.test(email.value)){
+				error1[1].textContent = 'Email không hợp lệ!';
+			}else {
+				error1[1].textContent = '';
+				count++;
+			}
+		});
+
+		var sdt = document.getElementById("sdt").addEventListener("keyup", function(){
+			var so = /[0-9]/;
+			if(phone.value == "" || !so.test(phone.value)){
+				error1[2].textContent = 'Số điện thoại không hợp lệ!';
+			}else {
+				error1[2].textContent = '';
+				count++;
+			}
+		});
+		
+		var password = document.getElementById("password").addEventListener("keyup", function(){
+			if(password.value == '' || password.value.length < 6){
+				error1[3].textContent = 'Password không hợp lệ!';
+			}else {
+				error1[3].textContent = '';
+				count++;
+			}
+		});
+
+		var password1 =document.getElementById("password1").addEventListener("keyup", function(){
+			if(password1.value != password.value){
+				err[4].textContent = 'Password không hợp lệ!';
+			}else {
+				err[4].textContent = '';
+				count++;
+			}
+		});
+
+
+		var login =document.getElementById('login').addEventListener("click", function(){
+			if(count==5){
+				alert('Đăng kí thành công!')
+			}
+			else{
+				alert('Đăng kí thất bại!')
+			}
+		});
+
+		var reset = document.getElementById('reset').addEventListener("click", function(){
+			var inputFieldNames = ["name", "email", "sdt", "password", "password1"];
+			var inputFields = inputFieldNames.map(ele => document.getElementById(ele));
+			inputFields.forEach(ele => ele.value = "");	
+		});
+
+
+		
+	</script>
+</body>
+</html>

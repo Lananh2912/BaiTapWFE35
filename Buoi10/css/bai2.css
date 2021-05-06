@@ -1,0 +1,68 @@
+* {
+			margin: 0;
+			padding: 0;
+			}	
+		#content{
+			width: 50%;
+			height: 320px;
+			margin: auto;
+			border: 2px solid black;
+			border-radius: 20px;
+		}
+		.ten{
+			width: 20%;
+			float: left;
+		}
+		p{
+			margin: 22px;
+		}
+
+		.input{
+			width: 50%;
+			float: left;
+		}
+		input{
+			width: 100%;
+			margin-top: 4%;
+			padding: 10px;
+			
+		}
+		.error{
+			width: 30%;
+			float: left;
+		}
+		span{
+			margin-top: 10%;
+		}
+		.error1{
+			color: red;
+			float: left;
+			padding-left: 15%;
+			margin-bottom: 3px;
+		}
+		
+		.gioitinh>input{
+			width: 4%;
+			margin: 3% 0 0 0;
+		}
+		.red{
+			width: 80%;
+			float: left;
+			text-align: center;
+			padding-top: 15px;
+			padding-bottom: 15px;
+			box-sizing: border-box;
+		}
+		#login{
+			background-color: red;
+			font-weight: bold;
+			font-size: 15px;
+			color: #fff;
+			margin: 3% 30% 0 28%;;
+		}
+		#reset{
+			background-color: red;
+			font-weight: bold;
+			font-size: 15px;
+			color: #fff;
+		}

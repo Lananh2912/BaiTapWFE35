@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/bai1.css">
+</head>
+<body>
+	<center id="content">
+			<img class="img" src="img/1.jpg">
+			<img class="img" src="img/2.jpg">
+			<img class="img" src="img/3.jpg">
+
+			<div class="conntent1">
+				<button onclick="itemContent(0)"></button>
+				<button onclick="itemContent(1)"></button>
+				<button onclick="itemContent(2)"></button>
+				<button onclick="itemContent(3)"></button>
+			</div>
+			<img src="img/trai.jpg" id="trai">
+			<img src="img/phai.jpg" id="phai">
+	</center>
+
+				<script type="text/javascript" >
+			window.onload = function(){
+				document.getElementById('content').addEventListener('mouseover', function() {
+				document.getElementById('trai').style.display="block";
+				document.getElementById('phai').style.display="block";
+				});
+				document.getElementById('content').addEventListener('mouseout', function() {
+				document.getElementById('trai').style.display="none";
+				document.getElementById('phai').style.display="none";
+				});
+
+				var img 	= document.getElementsByClassName("img");
+				var trai 	= document.getElementById('trai');
+				var phai	= document.getElementById('phai');
+				var k = 0;
+
+				itemContent1();
+
+				trai.addEventListener('click', function() {
+					k--;
+					content();
+				});
+
+				phai.addEventListener('click', function() {
+					k++;
+					content();
+				});
+
+				function itemContent1() {
+					for(var i = 0; i < img.length; i++) {
+						img[i].style.display="none";
+					}
+
+					k++;
+					if(k < 0) {
+						k = img.length - 1;
+					}
+					if(k > img.length) {
+						k = 1;
+					}
+
+					img[k-1].style.display="block";
+
+					setTimeout(itemContent1, 5000);
+				}
+
+				function content() {
+					for(var i = 0; i < img.length; i++) {
+						img[i].style.display="none";
+					}
+
+					if(k < 1) {
+						k = img.length;
+					}
+					if(k > img.length) {
+						k = 1;
+					}
+
+					img[k-1].style.display="block";
+				}
+			}
+
+			function itemContent(n) {
+				for(var i = 0; i < document.getElementsByClassName("img").length; i++) {
+					document.getElementsByClassName("img")[i].style.display="none";
+				}
+				document.getElementsByClassName("img")[n].style.display="block";
+			}
+		</script>
+</body>
+</html>
