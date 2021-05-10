@@ -9,12 +9,10 @@
 		*{
 			margin: 0;
 		}
-		#to{
-			width: 90%;
-			margin-left: 70px;
-			margin-top: 30px;
+		#content{
+			width: 100%;
 		}
-		#con1{
+		#content-item{
 			background-color: red;
 			width: 100%;
 			height: 30vh;
@@ -24,13 +22,13 @@
 			padding: 30px;
     		color: white;
 		}
-		#inpu{
-			margin-left: 30px;
+		#input{
+			margin-left: 110px;
 			width: 130vh;
     		height: 30px;
     		float: left;
 		}
-		#but1{
+		#button{
 			width: 30vh;
     		height: 36px;
 		}
@@ -40,41 +38,41 @@
 			float: left;
 		}
 		.item{
-			padding: 10px 30px;
-			background-color: gray;
+			padding: 10px 110px;
+			background-color: #cccccc;
 			position: relative;
 		}
 		.remove{
-			right: 120px;
+			right: 150px;
 			position: absolute;
 		}
 		.item:hover{
-			background-color: #cccccc;
+			background-color: #e5e5e5;
 		}
 		
 	</style>
 </head>
 <body>
-	<div id="to">
-		<div id="con1">
+	<div id="content">
+		<div id="content-item">
 			<h1>My To Do List</h1>
-			<input type="text" placeholder="Title..." id="inpu">
-			<button id="but1">Add</button>
+			<input type="text" placeholder="Title..." id="input">
+			<button id="button">Add</button>
 		</div>
 
 	<script>
 		$(document).ready(function(){
-			$('#to').on('click','.remove',function(){
+			$('#content').on('click','.remove',function(){
 				console.log($(this).parent().remove())
 			})
 			
-			$("#but1").on("click", function(){
-				let inpu = $("#inpu").val();
-				if (inpu.length == 0){
-					alert("mời nhập lại");
+			$("#button").on("click", function(){
+				let input = $("#input").val();
+				if (input.length == 0){
+					alert("Mời nhập lại");
 				}
 				else{
-					$("#con1").append('<div class="item"><span>'+inpu+'</span><span class="remove">x</span></div>')
+					$("#content-item").append('<div class="item"><span>'+input+'</span><span class="remove">x</span></div>')
 				}
 			})
 			

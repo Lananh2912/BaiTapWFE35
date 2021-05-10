@@ -1,59 +1,185 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+<html lang="vi">
+	<head>
+		<meta charset="utf-8">
+		<title>Document</title>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">	
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			#content {
+				width: 50%;
+				margin: 0 auto;
+				margin-top: 50px;
+				background: red;
+				box-sizing: border-box;
+			}
+			.content-item{
+				width: 100%;
+				background: white;
+				box-sizing: border-box;
+			}
+			.content-1-item{
+				height: 40px;
+				width: 100%;
+				background: #808080;
+				border: 1px solid #CCCCCC;
+				box-sizing: border-box;
+				position: relative;
+				color: white;
+			}
+			.content-1-item button {
+				width: 40px;
+				height: 70%;
+				position: absolute;
+				top: 15%;
+				bottom: 15%;
+				left: -20px;
+				background: #00FF00;
+				border-color: #00FF00;
+				border-radius: 4px;
+			}
+			.content-1-item span {
+				position: absolute;
+				left: 50px;
+				top: 20%;
+				font-size: 18px;
+				font-weight: bold;
+			}
+			.content-2-item {
+				width: 100%;
+				padding: 5px;
+				background-color: rgba(0, 0, 0, 0.1);
+				box-sizing: border-box;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="content">
+			<div class="content-item">
+				<div class="content-1-item">
+					<button id="button1"><i class="fa fa-minus" aria-hidden="true"></i></button>
+					<span>This is an expanded panel</span>
+				</div>
+				<div class="content-2-item" id="id1">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing, elit. Reiciendis, labore architecto omnis. Velit, dolorum non id dolor vitae provident libero, reprehenderit atque fugit. Totam non modi voluptas pariatur eligendi at reiciendis ab saepe est nemo aliquam, laboriosam eos iure dolore dignissimos recusandae eveniet ea, beatae officia possimus repudiandae, sequi id excepturi expedita fuga? Cumque velit eligendi dolore recusandae nobis architecto nam sint aspernatur dolores pariatur accusantium nemo numquam, perferendis sequi ea consequuntur cupiditate, veniam, mollitia sapiente saepe libero qui facere. Cupiditate, quos laudantium voluptas fugit molestias dolores adipisci, reiciendis. Doloremque eum cupiditate excepturi maxime ducimus culpa beatae illum iusto sit quaerat, harum voluptatem quae porro, nulla debitis! Reprehenderit atque, ab omnis harum possimus deserunt! Laboriosam quod maiores est in, ratione ad provident labore adipisci at, ducimus animi id, quis necessitatibus magni. Ad asperiores hic, impedit natus aut officiis minima similique, laborum eveniet ipsa beatae quis est aperiam expedita suscipit quaerat exercitationem in veritatis libero perferendis tempora ex. Quia voluptatibus iure adipisci, consectetur odio facilis, similique officia fugit aliquam quam ut eaque atque deleniti voluptatum cupiditate in iste. Temporibus, quaerat. Maxime atque autem blanditiis nam facere similique error tempora veniam excepturi voluptatum possimus aperiam, impedit perspiciatis praesentium accusantium necessitatibus vitae explicabo provident labore minus temporibus in voluptatem cumque? Totam assumenda esse cupiditate dolores mollitia vero, non magni expedita saepe laboriosam iste repellat labore, at. Rerum odio, porro quos, asperiores ea cum aliquam magnam veniam temporibus excepturi pariatur eos commodi necessitatibus reprehenderit omnis labore deserunt sunt dignissimos. Aliquam saepe, dolor fuga iusto consectetur suscipit reiciendis illum repellendus vitae accusantium, magnam repellat eius quia sint blanditiis non cupiditate perferendis vero, modi voluptate eveniet dignissimos? Corporis dignissimos deleniti quam sed alias voluptatum, porro deserunt cumque eum asperiores eveniet in amet libero nulla accusantium labore, omnis facilis id, optio, itaque excepturi hic provident nostrum eius.</p>
+				</div>
+			</div>
 
-	<style type="text/css">
-		.container{
-			   text-align: center;
-    		width: 60%;
-    		margin: 0 auto;
-    		padding: 50px;
-    		background: pink;
-		}
-		input{
-			    width: 350px;
-    			height: 40px;
-		}
-		button{
-			height: 40px
-		}
-		.item{
-			height: 40px;
-    		line-height: 40px;
-    		padding: 0 232px;
-    		text-align: left;
-    		position: relative;
-		}
-		.remove{
-			position: absolute;
-			right: 232px;
-		}
-	</style>
-</head>
-<body>
-	<div class="container">
-		<input type="" name="title" id="title">
-		<button id="add">Add content</button>
-	</div>
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$('.container').on('click','.remove',function(){
-				console.log($(this).parent().remove())
-			})
+			<div class="content-item">
+				<div class="content-1-item">
+					<button id="button2"><i class="fa fa-plus" aria-hidden="true"></i></button>
+					<span>Second panel</span>
+				</div>
+				<div class="content-2-item" id="id2">
+					<p>Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Accusamus maxime impedit culpa, quo iusto? Quibusdam iure perspiciatis dignissimos pariatur doloremque deleniti a. Nobis neque repudiandae dolorem consectetur assumenda rem dignissimos distinctio quas velit eos molestias earum voluptatibus quod, totam accusamus aperiam, soluta, optio repellat ducimus. Eos eum quisquam sint odio? Fugit iure quibusdam blanditiis fugiat laborum pariatur quidem assumenda placeat excepturi odit cum rerum amet nobis repellat animi laudantium id in optio, aperiam, voluptates neque corporis voluptatum totam maiores, nesciunt. Laboriosam reprehenderit amet eaque nisi expedita odit corporis cupiditate delectus obcaecati ducimus, consequuntur veniam! Velit soluta nisi et sit totam, veritatis est possimus nesciunt mollitia molestiae fugit doloribus vitae, aliquam corporis ex eos dolores reprehenderit reiciendis repudiandae quo maiores nam rerum suscipit excepturi veniam. Corporis dicta rem consequuntur excepturi obcaecati voluptate eligendi dolorum cupiditate ratione, nostrum optio officia earum quisquam rerum, veritatis delectus quis repellat ab ducimus provident, facere cum. Laborum omnis explicabo odit doloremque ut voluptas consequatur quidem dolore obcaecati veritatis. Officia consectetur dolore, vel laboriosam, doloremque vero ea at aliquid? Laborum saepe provident, consequuntur est doloribus, qui error sapiente, iure, quae laboriosam odit quo blanditiis corporis necessitatibus tenetur ipsum! Aliquam at nam, magni soluta culpa nulla blanditiis ad ipsum consequatur unde iure maxime dolore mollitia, officiis sapiente voluptatum corrupti. A quae ratione totam et dolore. Mollitia quia reiciendis ullam optio voluptates veritatis temporibus quas, provident nostrum perferendis id, reprehenderit officiis dolorum ipsa repellat excepturi debitis dolore. Eum molestias expedita delectus exercitationem harum asperiores nemo corporis quidem sit optio voluptate totam laborum veniam, voluptatibus quisquam facere, rerum ratione. Nemo distinctio voluptas architecto corporis ratione reiciendis officiis voluptatem quod, fugiat quos laudantium esse quisquam animi delectus. Impedit sunt ut eaque, asperiores nesciunt hic nihil nisi. Quibusdam quaerat earum nesciunt ducimus. Magni iste eligendi, suscipit sunt odit, repellendus atque obcaecati ipsam?</p>
+				</div>
+			</div>
 
-			$('#add').on('click', function(){
-				let title = $('#title').val();
-				$('#title').val('');
-				if (title.length ==0 ) {
-					alert('mời nhập lại')
-				}else{
-					$('.container').append('<div class="item"><span>'+title+'</span><span class="remove">x</span></div>')
-				}
-			})
+			<div class="content-item">
+				<div class="content-1-item">
+					<button id="button3"><i class="fa fa-plus" aria-hidden="true"></i></button>
+					<span>Third Panel</span>
+				</div>
+				<div class="content-2-item" id="id3">
+					<p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo asperiores doloremque itaque totam quam eius natus ipsam aut illo eaque, culpa officia eligendi molestiae ex magni in alias expedita impedit consectetur adipisci dolorem et, officiis? Possimus porro, eius architecto iste maiores? Numquam necessitatibus dignissimos ex temporibus quasi asperiores distinctio minus illum. Quisquam dicta officia unde nisi quidem et fugiat, modi architecto molestias quod necessitatibus porro iusto consequatur voluptates accusamus voluptatum dolore sunt adipisci doloribus. Officiis aut dolores facere velit in dignissimos hic sint, quae doloribus numquam, expedita nesciunt sequi consectetur, doloremque autem ab esse explicabo iure culpa, omnis cumque sit tempore nostrum ad recusandae! Ducimus accusantium ipsa saepe voluptas consequatur. Fuga doloribus modi ab quo ea voluptates, commodi voluptas dolor id quaerat expedita? Harum asperiores, amet error impedit, necessitatibus ea maxime veniam natus rem assumenda velit iste sequi aut quisquam provident unde repellendus explicabo sint repellat inventore pariatur odio esse architecto aliquid. Sint laudantium in, dolore distinctio qui ex nam itaque, ipsam minus amet repellendus ducimus eligendi, enim. Dicta, asperiores nostrum doloremque vero in dignissimos adipisci ex, nesciunt soluta eligendi, aperiam minus tempora facilis ipsam eum ad quo quos modi. Expedita, reprehenderit, voluptates! Corporis, officia eos laboriosam quis nisi voluptates ad sunt deserunt quisquam placeat aspernatur ullam id molestias, reiciendis rem quae. Rerum unde eveniet quasi nisi. Velit quas, voluptates. Similique, inventore iste soluta quidem dicta recusandae maiores ut esse commodi vitae minima quas tenetur quis minus eligendi obcaecati praesentium voluptas repellat illum excepturi ipsa fuga. Deleniti odit esse, excepturi minima adipisci, quia. Suscipit ratione natus hic placeat. Similique debitis doloribus optio ipsum alias sequi saepe ex quibusdam cumque, voluptates veritatis ullam corporis sed esse reiciendis delectus illo tenetur consequatur sit! Quae odio est magni asperiores, ipsa doloribus, commodi eius nesciunt, soluta repellendus aliquid quam esse ipsam facilis, fuga dolore?</p>
+				</div>
+			</div>
+
+			<div class="content-item">
+				<div class="content-1-item">
+					<button id="button4"><i class="fa fa-plus" aria-hidden="true"></i></button>
+					<span>Fourth Panel</span>
+				</div>
+				<div class="content-2-item" id="id4">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae unde debitis distinctio earum id suscipit explicabo, accusantium voluptates rerum, nam praesentium, in ut officia culpa officiis voluptatum laboriosam doloribus quas minus modi nobis, magnam qui excepturi voluptatem ducimus. Quaerat sed cupiditate quod, commodi iste doloremque vel voluptas. Non deleniti cum ab quam ratione ullam nobis consequatur, rem modi aliquam repellat est obcaecati cupiditate quis dolorem alias debitis, reiciendis rerum id eos iure! Dolore rem rerum ipsa, amet illo, possimus recusandae ab distinctio dignissimos, exercitationem magni incidunt doloribus facilis veniam blanditiis totam explicabo temporibus, atque hic. Quo ullam fugiat suscipit, debitis veniam deserunt quasi adipisci nemo exercitationem ea, vel quidem ratione unde assumenda rerum placeat a dolore labore minus sit quos repellendus corporis soluta? Quam repudiandae ratione iste inventore accusamus illum assumenda accusantium omnis quae ab. Dolores officia maiores neque earum quasi amet? Mollitia eligendi unde quisquam. Accusantium odio optio rem minima vitae pariatur reiciendis modi dicta temporibus cumque consectetur eius alias adipisci architecto odit assumenda reprehenderit in ab illum voluptatem fugit nemo neque, quis corporis distinctio. Animi corrupti, odio omnis porro, repellendus deleniti dolorum consectetur ad recusandae, quo laudantium sit rerum aliquam, consequuntur maiores numquam non vero ab ut commodi totam. Accusantium non optio unde labore quas esse alias incidunt praesentium quasi aliquam facere dignissimos fuga, assumenda eaque, animi voluptatibus error iusto debitis velit distinctio et neque? Quas, dolorum? Provident eos voluptatibus itaque at quia atque maxime magnam. Animi laudantium, tenetur aliquam, impedit fugit unde ipsum ea porro facere, id corporis tempore, maiores magnam vero deleniti a cumque dolorem? Impedit voluptates reprehenderit nisi vel laboriosam necessitatibus, iure, natus. Autem voluptate ab repellat doloribus culpa hic temporibus laboriosam vero blanditiis magni asperiores aperiam cum, veniam nemo, magnam a reprehenderit ipsa totam dicta nesciunt odit, labore itaque? Atque quisquam earum ipsum quasi!</p>
+				</div>
+			</div>
+		</div>
+
 			
-		})
-	</script>
-</body>
+
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				var plus = '<i class="fa fa-plus" aria-hidden="true"></i>';
+				var mimus = '<i class="fa fa-minus" aria-hidden="true"></i>';
+
+				$('#id1').show();
+
+				$('#button1').click(function() {
+					if($('#button1').html() == plus) {
+						$('#button1').html(mimus);
+					}else {
+						$('#button1').html(plus);
+					}
+
+					$('#button2').html(plus);
+					$('#button3').html(plus);
+					$('#button4').html(plus);
+
+					$('#id1').slideToggle();
+					$('#id2').hide();
+					$('#id3').hide();
+					$('#id4').hide();
+				});
+
+				$('#id2').hide();
+				$('#button2').click(function() {
+					if($('#button2').html() == plus) {
+						$('#button2').html(mimus);
+					}else {
+						$('#button2').html(plus);
+					}
+
+					$('#button1').html(plus);
+					$('#button4').html(plus);
+					$('#button3').html(plus);
+
+					$('#id2').slideToggle();
+					$('#id1').hide();
+					$('#id3').hide();
+					$('#id4').hide();
+				});
+
+				$('#id3').hide();
+				$('#button3').click(function() {
+					if($('#button3').html() == plus) {
+						$('#button3').html(mimus);
+					}else {
+						$('#button3').html(plus);
+					}
+
+					$('#button1').html(plus);
+					$('#button2').html(plus);
+					$('#button4').html(plus);
+
+					$('#id3').slideToggle();
+					$('#id4').hide();
+					$('#id2').hide();
+					$('#pc1').hide();
+				});
+
+				$('#id4').hide();
+				$('#button4').click(function() {
+					if($('#button4').html() == plus) {
+						$('#button4').html(mimus);
+					}else {
+						$('#button4').html(plus);
+					}
+
+					$('#button1').html(plus);
+					$('#button2').html(plus);
+					$('#button3').html(plus);
+
+					$('#id4').slideToggle();
+					$('#id3').hide();
+					$('#id2').hide();
+					$('#id1').hide();
+				});
+			});
+		</script>
+	</body>
 </html>
