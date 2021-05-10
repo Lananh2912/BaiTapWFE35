@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+	<style type="text/css">
+		.error{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+		name: 
+		<input type="text" name="" id="name"> <br>
+		<p class="error" id="error_name"></p> <br>
+		age: 
+		<input type="number" name="" id="age"> <br>
+		<p class="error"  id="error_age"></p> <br>
+		<button id="submit">submit</button>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#submit').on('click', function(){
+				$('#error_name').html('')
+				$('#error_age').html('')
+			validate()
+			
+		})
+		$('#name').focus(function(){
+			console.log('change')
+			$('#error_name').html('')
+		})
+		function validate(){
+			let result = true
+			let name = $('#name').val()
+			let age = $('#age').val()
+			if (name.length == 0) {
+				$('#error_name').html('Vui lòng điền tên')
+				result = false
+			}
+			if (age.length == 0) {
+				$('#error_age').html('Vui lòng điền tuổi')
+				result= false
+			}
+			return result
+			}
+		})
+</script>
+</body>
+</html>

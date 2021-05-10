@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+
+	<style type="text/css">
+		.container{
+			   text-align: center;
+    		width: 60%;
+    		margin: 0 auto;
+    		padding: 50px;
+    		background: pink;
+		}
+		input{
+			    width: 350px;
+    			height: 40px;
+		}
+		button{
+			height: 40px
+		}
+		.item{
+			height: 40px;
+    		line-height: 40px;
+    		padding: 0 232px;
+    		text-align: left;
+    		position: relative;
+		}
+		.remove{
+			position: absolute;
+			right: 232px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<input type="" name="title" id="title">
+		<button id="add">Add content</button>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.container').on('click','.remove',function(){
+				console.log($(this).parent().remove())
+			})
+
+			$('#add').on('click', function(){
+				let title = $('#title').val();
+				$('#title').val('');
+				if (title.length ==0 ) {
+					alert('mời nhập lại')
+				}else{
+					$('.container').append('<div class="item"><span>'+title+'</span><span class="remove">x</span></div>')
+				}
+			})
+			
+		})
+	</script>
+</body>
+</html>

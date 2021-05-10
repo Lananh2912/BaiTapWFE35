@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div class="container">
+		<input type="" name="title" id="title">
+		<button id="add">Add content</button>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.container').on('click','.remove', function(){
+				console.log($(this).parent().remove())
+			})
+
+			$('add').on('click', function(){
+				let title = $('title').val();
+				$('#title').val('');
+				if (title.length==0) {
+					alert('Xin mời bạn nhập lại')
+				}else{
+					$('container').append('<div class="item><span>'+title+'</span><span class="remove">x</span></div>')
+				}
+			})
+		})
+	</script>
+</body>
+</html>
