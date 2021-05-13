@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+	<link rel="stylesheet" type="text/css" href="CSS/bai1.css">
+	<style>
+		@media screen and (max-width: 995px) {
+			#icon{
+				display: block;
+				float: right;
+				margin-right: 30px;
+				cursor: pointer;
+			}
+		}
+	</style>
+	
+</head>
+<body>
+	<div id="container">
+		<div id="logo">
+			<span>Wordpress Reponsive Menu</span>
+		</div>
+		<div id="menu">
+			<ul>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Pricing</a></li>
+				<li><a href="#">Why go pro ?</a></li>
+				<li id="sup"><a  href="#">Support</a><p id="plus"><i  class="fa fa-plus" aria-hidden="true"></i></p>
+					<ul>
+						<li><a href="#">Docs</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">Donate</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>	
+				</li>
+				<li id="ac"><a href="#">Account</a></li>
+			</ul>
+		</div>
+		<div id="icon">
+			<i class="fa fa-bars" aria-hidden="true"></i>
+		</div>
+		<div>
+		<p id="phai1">Lorem ipsum, dolor sit.</p>
+		<p id="phai">Lorem, ipsum.</p>
+	</div>
+	<main>
+		<h1>Workpress Responsive Menu</h1>
+		<p>Taking the streess out of buillding your website</p>
+		<button>Get it now</button>
+	</main>
+	</div>
+	<script type="text/javascript">
+		var bar = '<i class="fa fa-bars" aria-hidden="true"></i>';
+		var close = '<i class="fa fa-times" aria-hidden="true"></i>';
+		var cong = '<i class="fa fa-plus" aria-hidden="true"></i>';
+		var tru = '<i class="fa fa-minus" aria-hidden="true"></i>';
+
+		$(function()
+		{	
+			var check = true;
+			$('#icon').click(function()
+			{
+				
+				if(check == true)
+				{
+					
+					$('#icon').html(close).animate({  borderSpacing: -90 }, {
+   					 step: function(now,fx) {
+				      $(this).css('-webkit-transform','rotate('+now+'deg)'); 
+				      $(this).css('-moz-transform','rotate('+now+'deg)');
+				      $(this).css('transform','rotate('+now+'deg)');
+  				    },
+   					 duration:'slow'
+					},'linear');
+
+					$("#menu").animate({"left":"0px"}, "slow");
+					check = !check;
+
+				}else
+				{   
+					
+					$('#icon').html(bar).animate({  borderSpacing: 180 }, {
+   					 step: function(now,fx) {
+				      $(this).css('-webkit-transform','rotate('+now+'deg)'); 
+				      $(this).css('-moz-transform','rotate('+now+'deg)');
+				      $(this).css('transform','rotate('+now+'deg)');
+  				    },
+   					 duration:'slow'
+					},'linear');
+					$("#menu").animate({"left":"-60%"}, "slow");
+					check = !check;
+					
+				}
+
+				});
+
+				var check1 = true;
+				$('#sup').click(function()
+				{
+					
+					if(check1 == true)
+				{
+					
+					$('#plus').html(tru).animate({  borderSpacing: 180 }, {
+   					 step: function(now,fx) {
+				      $(this).css('-webkit-transform','rotate('+now+'deg)'); 
+				      $(this).css('-moz-transform','rotate('+now+'deg)');
+				      $(this).css('transform','rotate('+now+'deg)');
+  				    },
+   					 duration:'slow'
+					},'linear');
+					$('#menu ul li ul').css({'position':'static'});
+					$('#sup').css({'background':'ffd4aa'});
+					
+					$('#menu ul li ul').slideDown();
+					check1 = !check1;
+
+				}else
+				{   
+					
+					$('#plus').html(cong).animate({  borderSpacing: -90 }, {
+   					 step: function(now,fx) {
+				      $(this).css('-webkit-transform','rotate('+now+'deg)'); 
+				      $(this).css('-moz-transform','rotate('+now+'deg)');
+				      $(this).css('transform','rotate('+now+'deg)');
+  				    },
+   					 duration:'slow'
+					},'linear');
+					check1 = !check1;
+					$('#sup').css({'background':'#EB600C'});
+					$('#menu ul li ul').slideUp();
+					
+				}
+				});
+			});
+	</script>
+</body>
+</html>

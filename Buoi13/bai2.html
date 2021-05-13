@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+	<style>
+		div{
+			text-align: center;
+			color: blue;
+			margin: 10px;
+		}
+		.img {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.5s;
+            width: 200px;
+            height: 200px;
+        }
+        .img:hover {
+            opacity: 0.7;
+        }
+        
+	</style>
+</head>
+<body>
+	<div>
+		<h1>Album bé dễ thương</h1>
+		<img id="img1" class="anh" src="img/images1.jpg">
+		<img id="img2" class="anh" src="img/images2.jpg">
+		<img id="img3" class="anh" src="img/images3.jpg">
+		<img id="img4" class="anh" src="img/images4.jpg">
+		<img id="img5" class="anh" src="img/images5.jpg">	
+	</div>
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#img1").on('click', function(){
+				$("#img1").css({
+					"width" : "350px",
+					"height" : "300px",
+					"position" : "relative",
+					"zIndex" : "1"
+
+				})
+				$("#img2").css({
+					"position" : "relative"
+				})
+				$("#img3").css({
+					"position" : "relative"
+				})
+				$("#img4").css({
+					"position" : "relative"
+				})
+				$("#img5").css({
+					"position" : "relative"
+				})
+			})
+		})
+	</script>
+</body>
+</html>
