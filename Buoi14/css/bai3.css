@@ -1,0 +1,81 @@
+
+body{
+			margin: 0;
+			padding: 0;
+		}
+		#img{
+			
+			background-repeat: no-repeat;
+			background-size: cover;
+			height: 100vh;
+			color: white;
+			position: relative;
+			z-index: 200;
+		}
+		#banner{
+			position: absolute;
+		    width: 100%;
+		    height: 100vh;
+		    top: 0;
+		    left: 0;
+		    background-image: url(../images/homebg.jpg);
+				}
+		#opacity{
+			position: absolute;
+		    width: 100%;
+		    height: 100vh;
+		    top: 0;
+		    left: 0;
+		    background-color: #00000085;
+		    z-index: 100;
+		}
+		.row{
+			color: white;
+		}
+		.menu{
+			text-align: center;
+			color: white;
+			padding: 20%;
+		}
+		.row1>img{
+			margin-top: -80px;
+		}
+		.anh{
+			background-image: url(../images/stabmenubg.png);
+			height: 20vh;
+		}
+		.progress{
+			width: 130px;
+		}
+		.web{
+			color: black;
+			margin-top: 150px;
+		}
+		.card{
+			border: none !important;
+		}
+		
+
+		@media (min-width: 992px){
+			nav > div{
+				position: absolute;
+				right: 5%;
+			}
+			li{
+				margin-right: 50px;
+			}
+			a{
+				color: white !important;
+			}
+			li > div > a {
+				color: black !important;
+			}
+		}
+		@media (max-width: 991px){
+			nav {
+				background-color: white;
+			}
+		}
+@media screen and (min-width: 320px) and (max-width: 600px){
+
+}
